@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="DrinksVendingMachine.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DrinksVendingMachine"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:ConnectionId='2' x:Name="VendingMainPage">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Button x:ConnectionId='3' x:Name = "Btn1" Content="Cappuccino" FontSize="40" Height="66" Margin="84,39,0,0" VerticalAlignment="Top" Width="311" Grid.ColumnSpan="2"                             />
+        <Button x:ConnectionId='4' x:Name = "Btn2" Content="Latte" FontSize="40" Height="65" Margin="84,137,0,0" VerticalAlignment="Top" Width="311" Grid.RowSpan="2" Grid.ColumnSpan="2"                             />
+        <Button x:ConnectionId='5' x:Name = "Btn3" Content="Americano" FontSize="40" Height="67" Margin="84,46,0,0" Grid.Row="1" Width="311" Grid.ColumnSpan="2"                              VerticalAlignment="Top"/>
+        <Button x:ConnectionId='6' x:Name = "Btn4" Content="Espresso" FontSize="40" Height="72" Margin="84,137,0,0" Grid.Row="1" VerticalAlignment="Top" Width="311" Grid.RowSpan="2" Grid.ColumnSpan="2"                             />
+        <Button x:ConnectionId='7' x:Name = "Btn5" Content="English Tea" FontSize="40" Height="66" Margin="24,39,0,0" VerticalAlignment="Top" Width="311" Grid.Column="3" Grid.ColumnSpan="2"                             />
+        <Button x:ConnectionId='8' x:Name = "Btn6" Content="Lemon Tea" FontSize="40" Height="65" Margin="24,137,0,0" VerticalAlignment="Top" Width="311" Grid.Column="3" Grid.RowSpan="2" Grid.ColumnSpan="2"                             />
+        <Button x:ConnectionId='9' x:Name = "Btn7" Content="Minth Tea" FontSize="40" Height="67" Margin="24,46,0,0" Grid.Row="1" VerticalAlignment="Top" Width="311" Grid.Column="3" Grid.ColumnSpan="2"                             />
+        <Button x:ConnectionId='10' x:Name = "Btn8" Content="Aviviz Tea" FontSize="40" Height="72" Margin="24,137,0,0" Grid.Row="1" VerticalAlignment="Top" Width="311" Grid.Column="3" Grid.RowSpan="2" Grid.ColumnSpan="2"                             />
+        <Button x:ConnectionId='11' x:Name = "Btn9" Content="Swiss Chocolate" FontSize="40" Height="66" Margin="222,39,0,0" VerticalAlignment="Top" Width="311" Grid.Column="1" Grid.ColumnSpan="2"                             />
+        <Button x:ConnectionId='12' x:Name = "Btn10" Content="Chocolata" FontSize="40" Height="65" Margin="222,137,0,0" VerticalAlignment="Top" Width="311" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2"                             />
+        <Button x:ConnectionId='13' x:Name = "Btn11" Content="French Vanilla" FontSize="40" Height="67" Margin="222,46,0,0" Grid.Row="1" VerticalAlignment="Top" Width="311" Grid.Column="1" Grid.ColumnSpan="2"                             />
+        <Button x:ConnectionId='14' x:Name = "Btn12" Content="Droz Chocolate" FontSize="40" Height="72" Margin="222,137,0,0" Grid.Row="1" VerticalAlignment="Top" Width="311" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2"                             />
+        <Border x:ConnectionId='15' x:Name="Border"  BorderThickness="8" BorderBrush="Black" Grid.ColumnSpan="3" Grid.Column="1" HorizontalAlignment="Left" Height="99" Margin="156,29,0,0" Grid.Row="5" VerticalAlignment="Top" Width="500" >
+            <Button x:ConnectionId='22' Content="Pick Cup" Background="AntiqueWhite" FontSize="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                             Margin="2,2,-2,2"/>
+        </Border>
+        <TextBlock x:ConnectionId='16' x:Name="Communication_Pannel" Grid.Column="1"  HorizontalAlignment="Left" FontSize="44" Margin="222,76,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="452" Width="707" Grid.RowSpan="3" />
+
+        <Border BorderThickness="8" BorderBrush="Black" Grid.Column="5" HorizontalAlignment="Left" Height="180" Margin="191,170,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="34"/>
+        <TextBox x:ConnectionId='17' x:Name="CoinValue" Background="AntiqueWhite" BorderBrush="Black"                         Grid.Column="4" FontSize="35" Text="Insert Coin Value" HorizontalAlignment="Left" Margin="148,24,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="66" Width="286" Grid.ColumnSpan="2" />
+        <Button x:ConnectionId='18' x:Name="PAY" Content="Insert Coin =>" BorderBrush="Black" BorderThickness="4" Background="AntiqueWhite" Foreground="Green" FontSize="35" Grid.Column="4" Margin="127,46,0,0" Grid.Row="1" Height="80" Width="327" VerticalAlignment="Top"                         Grid.ColumnSpan="2"/>
+        <TextBlock x:ConnectionId='19' x:Name="MachineOutPut" Grid.Column="3" FontSize="35" HorizontalAlignment="Left" Margin="310,157,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="327" Grid.RowSpan="3" Width="629"/>
+        <Button x:ConnectionId='20' Content="Reset" FontSize="25" Grid.Column="5" Margin="208,10,0,0" VerticalAlignment="Top" Height="42" Width="102"                          />
+        <TextBlock x:ConnectionId='21' x:Name="Menu" FontSize="35" Foreground="Brown" HorizontalAlignment="Left" Margin="71,105,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="584" Grid.RowSpan="4" Width="356" Grid.ColumnSpan="2"/>
+        <Button Content="Change" FontSize="35" Foreground="Green" Background="AntiqueWhite" Grid.Column="4" Margin="192,156,0,0" Grid.Row="4" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="4" Height="80" Width="198" Grid.RowSpan="2" Grid.ColumnSpan="2" />
+    </Grid>
+</Page>
+
