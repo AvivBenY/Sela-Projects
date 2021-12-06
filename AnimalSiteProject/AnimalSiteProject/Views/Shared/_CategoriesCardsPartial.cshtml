@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Category>
+
+@*Show Categories*@
+@foreach (var item in Model)
+{
+    <div class="card text-center" style="width: 18rem;">
+        <a asp-controller="Home" asp-action="ShowCategory" asp-route-id="@item.CategoryId">
+            <h5 class="card-header">@item.CategoryName</h5>
+        </a>
+    </div>
+}

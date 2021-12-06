@@ -1,0 +1,8 @@
+﻿@model IEnumerable<Category>
+@{
+    Layout = "~/Views/Shared/Layout/_Layout.cshtml";
+    ViewBag.Title = "Catalog";
+}
+
+@*Display all categories*@
+@await Html.PartialAsync("_CategoriesCardsPartial", Model)

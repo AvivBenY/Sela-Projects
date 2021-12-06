@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Animal>
+@{
+    Layout = "~/Views/Shared/Layout/_Layout.cshtml";
+    ViewBag.Title = "Index";
+}
+
+@*Home page - display 2 most popoular animals*@
+<div>
+   <div class="container d-flex justify-content-center align-items-center flex-column">
+       <h1 class="text-white">Our Most Pupoular Friends!</h1>
+       @await Html.PartialAsync("_AnimalDisplayPartial", Model)
+   </div>
+</div>

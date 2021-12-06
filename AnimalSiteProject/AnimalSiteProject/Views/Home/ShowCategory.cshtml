@@ -1,0 +1,11 @@
+﻿@model Category
+@{
+    ViewBag.Title = "ShowCategory";
+    Layout = "~/Views/Shared/Layout/_Layout.cshtml";
+}
+
+@*Show all animals in the category*@
+<div>
+    @Model.CategoryName
+</div>
+@await Html.PartialAsync("_AnimalDisplayPartial", Model.Animals)

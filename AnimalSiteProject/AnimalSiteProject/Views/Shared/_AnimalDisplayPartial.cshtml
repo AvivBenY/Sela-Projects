@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Animal>
+
+@*2 Most popoular animals*@
+<div class="container d-flex align-items-center flex-wrap">
+    @foreach (var item in Model)
+    {
+        <div>
+            <div class="card bg-dark text-white shadow-lg m-2 rounded" style="width: 18rem; height:550px">
+                <img class="card-img" src="~/Pictures/@(item.PictureName)"
+                     style=" height: -webkit-fill-available; max-height: 85%" />
+                <div class="card-img-overlay" style="height:50%">
+                    <h3 class="card-title">@item.AnimalName</h3>
+                    <h4 class="card-text">@Html.DisplayNameFor(a => item.Age): @Html.DisplayFor(a => item.Age)</h4>
+                </div>
+                <div class="card-body card-body d-flex flex-column">
+                    <a asp-controller="Home" asp-action="AnimalProfile" asp-route-id="@item.AnimalId" role="button" class="btn btn-info mt-auto">
+                        More Info
+                    </a>
+                </div>
+                <br />
+                <h6>@item.Comments.Count Comments</h6>
+            </div>
+        </div>
+    }
+</div>

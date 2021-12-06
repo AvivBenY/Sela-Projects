@@ -1,0 +1,58 @@
+﻿@model AnimalSiteProject.Models.Animal
+
+@{
+    ViewData["Title"] = "EditPet";
+    Layout = "~/Views/Shared/Layout/_Layout.cshtml";
+}
+
+@*Edit Pet*@
+<h1>EditPet</h1>
+
+<h4>Animal</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditPet">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*<div class="form-group">
+                <label asp-for="AnimalId" class="control-label"></label>
+                <input asp-for="AnimalId" class="form-control" />
+                <span asp-validation-for="AnimalId" class="text-danger"></span>
+            </div>*@
+            @Html.HiddenFor(m => m.AnimalId)
+            <div class="form-group">
+                <label asp-for="AnimalName" class="control-label"></label>
+                <textarea asp-for="AnimalName" class="form-control" style="width:250px"></textarea>
+                <span asp-validation-for="AnimalName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Age" class="control-label"></label>
+                <textarea asp-for="Age"  class="form-control" style="width: 250px"> </textarea>
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PictureName" class="control-label"></label>
+                <textarea asp-for="PictureName" class="form-control" style="width: 250px"> </textarea>
+                <span asp-validation-for="PictureName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control" style="width: 250px"> </textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CategoryId" class="control-label"></label>
+                <select asp-for="CategoryId" asp-items="ViewBag.Categories"> </select>
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

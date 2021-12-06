@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Animal>
+
+@{
+    string isActive = "active";
+    var itemList = Model.ToList();
+}
+
+@*Admin Main Page - Show all animals*@
+
+<div id="multi-item-example" class="carousel slide carousel-multi-item border border-white" data-ride="carousel" style="width: 88%; height: 90%; max-height: inherit;">
+    <ol class="carousel-indicators" style="width:auto; height:fit-content;">
+        @for (int i = 0; i < itemList.Count; i += 3)
+        {
+            @if (i == 0)
+            {
+                <li data-bs-target="#multi-item-example" data-bs-slide-to="@i" class="active"></li>
+                continue;
+            }
+            <li data-bs-target="#multi-item-example" data-bs-slide-to="@i"></li>
+        }
+    </ol>
+    <div class="carousel-inner" role="listbox" style="width: 90%; height: 100%; max-height: inherit; margin:auto">
+        <div class="container">
+            @for (int i = 0; i < itemList.Count; i += 3)
+            {
+                @if (i != 0)
+                {
+                    @(isActive = "");
+                }
+                //The Carousel items here we print 3 at a time max //
+                <div class="carousel-item @isActive bg-dark" style="max-height:100%; ">
+                    <div class="card-group bg-dark">
+                        @for (int j = i; j < i + 3 && j < itemList.Count; j++)
+                        {
+                            <div class="card bg-dark text-white shadow-lg m-2 bg-white rounded">
+                                <img class="card-img bg-dark" src="~/Pictures/@(itemList[j].PictureName)" style="height: 80%; max-height: 100%;" alt="Card image cap" />
+                                <div class="card-body bg-dark border border-white" style="max-height:15%">                                                                      
+                                        <p class="card-title">@itemList[j].AnimalName</p>
+                                        <p class="card-text">@Html.DisplayNameFor(a => itemList[j].Age): @Html.DisplayFor(a => itemList[j].Age)</p>                                    
+                                </div>
+                                <div class="card-footer d-flex justify-content-center bg-dark border border-white">
+                                    <a asp-controller="Home" asp-action="AnimalProfile"
+                                       asp-route-id="@itemList[j].AnimalId" role="button" class="btn btn-info">
+                                        More Info
+                                    </a>
+                                    <div class="btn-group bg-dark">                                       
+                                        <a asp-controller="Admin" asp-action="Delete" role="button" class="btn btn-danger" asp-route-id="@itemList[j].AnimalId">Delete</a>
+                                        <a asp-controller="Admin" asp-action="EditPet" role="button" class="btn btn-secondary" asp-route-id="@itemList[j].AnimalId">Edit</a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="position-relative">
+        <a class="carousel-control-prev" href="#multi-item-example" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#multi-item-example" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </a>
+    </div>
+</div>

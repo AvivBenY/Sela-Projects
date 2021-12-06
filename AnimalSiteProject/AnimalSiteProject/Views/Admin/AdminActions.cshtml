@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Animal>
+@{
+    ViewData["Title"] = "AddPet";
+    Layout = "~/Views/Shared/Layout/_Layout.cshtml";
+}
+
+@await Html.PartialAsync("_AdminBarPartial", Model)
+@await Html.PartialAsync("_AdminPartial", Model)
+

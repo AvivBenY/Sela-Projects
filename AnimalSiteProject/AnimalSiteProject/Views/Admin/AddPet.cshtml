@@ -1,0 +1,52 @@
+﻿@model AnimalSiteProject.Models.AnimalViewModel
+
+@{
+    ViewData["Title"] = "AddPet";
+    Layout = "~/Views/Shared/Layout/_Layout.cshtml";
+}
+
+@await Html.PartialAsync("_AdminBarPartial")
+
+@*Create Pet Form*@
+
+<div class="container align-items-center" >
+    <h1>AddPet</h1>
+
+    <h4>Animal</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="AddPet" method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Animal.AnimalName" class="control-label"></label>
+                    <input asp-for="Animal.AnimalName" class="form-control" />
+                    <span asp-validation-for="Animal.AnimalName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Animal.Age" class="control-label"></label>
+                    <input asp-for="Animal.Age" class="form-control" />
+                    <span asp-validation-for="Animal.Age" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Add Photo</label>
+                    <input asp-for="PictureName" type="file" class="form-control" />
+                    <span asp-validation-for="PictureName" class="text-danger"></span>
+                </div>                
+                <div class="form-group">
+                    <label asp-for="Animal.Description" class="control-label"></label>
+                    <input asp-for="Animal.Description" class="form-control" />
+                    <span asp-validation-for="Animal.Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Animal.CategoryId" class="control-label"></label>
+                    <select asp-for="Animal.CategoryId" asp-items="ViewBag.Categories"></select>
+                    <span asp-validation-for="Animal.CategoryId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>    
+</div>

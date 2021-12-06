@@ -1,0 +1,84 @@
+﻿@model IEnumerable<AnimalSiteProject.Models.Animal>
+
+@{
+    ViewData["Title"] = "AllPetsDisplay";
+    Layout = "~/Views/Shared/Layout/_Layout.cshtml";
+}
+
+@await Html.PartialAsync("_AdminBarPartial", Model)
+<br />
+<h1>All Of Our Animals</h1>
+<br />
+@*First Admin page - all animals Display & Admin Nav-Bar*@
+
+<<div style="height: 600px;overflow: scroll;">
+    <table class="table text-white border border-white" style="width: inherit; height: inherit; max-height: inherit;">
+        <div class="panel-heading">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AnimalId)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AnimalName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Age)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PictureName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CategoryId)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+        </div>
+        <div class="panel-body">
+            <tbody style="width:inherit; height:inherit;">
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AnimalId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AnimalName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Age)
+                    </td>
+                    <td>
+                        <img src="~/Pictures/@item.PictureName" style="width:150px; height:150px;" />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CategoryId)
+                    </td>
+                    <td>
+                        <div class="container btn-group">
+                            <div class="col">
+                                <div class="row">
+                                    <a asp-controller="Home" asp-action="AnimalProfile" asp-route-id="@item.AnimalId" role="button" class="btn btn-info">More Info</a>
+                                </div>
+                                <div class="row">
+                                    <a asp-controller="Admin" asp-action="Delete" role="button" class="btn btn-danger" asp-route-id="@item.AnimalId">Delete</a>
+                                </div>
+                                <div class="row">
+                                    <a asp-controller="Admin" asp-action="EditPet" role="button" class="btn btn-dark" asp-route-id="@item.AnimalId">Edit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </div>
+    </table>
+</div>
