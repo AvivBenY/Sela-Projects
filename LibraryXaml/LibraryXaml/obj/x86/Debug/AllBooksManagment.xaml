@@ -1,0 +1,153 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="LibraryXaml.AllBooksManagment"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LibraryXaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:data="using:BookLib"
+    xmlns:y="using:System"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources >
+        <Style TargetType="TextBlock" x:Key="CustomTextBlockStyle">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+        </Style>
+        <DataTemplate x:Key="AbstractItemsDataTemplate"                               >
+            <StackPanel x:ConnectionId='3' Orientation="Vertical" Width="575">
+                <TextBlock x:ConnectionId='4' FontWeight="Bold"                      />
+                <TextBlock x:ConnectionId='5'                                                       />
+                <TextBlock x:ConnectionId='6'                                                            />
+                <TextBlock x:ConnectionId='7'                                                                                   />
+                <TextBlock x:ConnectionId='8'                                    />
+                <TextBlock x:ConnectionId='9'                                                               />
+                <TextBlock/>
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <Button x:ConnectionId='54'                           Content="Back To MainPage" FontSize="15" Margin="0,0,0,0" />
+            <TextBlock x:ConnectionId='55' x:Name="Title" HorizontalAlignment="Center" FontSize="50"  Text="Books Manager" TextWrapping="Wrap" Style="{StaticResource CustomTextBlockStyle}" VerticalAlignment="Top" Height="90" Width="361"/>
+            <TextBlock x:ConnectionId='56' x:Name="Welcome_MessageBox" FontSize="35" TextWrapping="Wrap" HorizontalAlignment="Center" Style="{StaticResource CustomTextBlockStyle}" Height="64" Width="269" />
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.05*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="0.05*" />
+                <ColumnDefinition Width="4*" />
+                <ColumnDefinition Width="0.05*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" BorderBrush="Black" BorderThickness="2">
+                <TextBlock Text="Add Book" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Center" Style="{StaticResource CustomTextBlockStyle}"/>
+                <DropDownButton x:ConnectionId='32' x:Name="TypePick_DropDown" FontSize="20" Content="Item Type" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="2" >
+                    <DropDownButton.Flyout>
+                        <MenuFlyout Placement="Bottom">
+                            <MenuFlyoutItem x:ConnectionId='52' Text="Book"                      />
+                            <MenuFlyoutItem x:ConnectionId='53' Text="Journal"                         />
+                        </MenuFlyout>
+                    </DropDownButton.Flyout>
+                </DropDownButton>
+                <StackPanel x:ConnectionId='33' x:Name="AddItemSP" Orientation="Vertical" Visibility="Collapsed" HorizontalAlignment="Stretch" Margin="0,150,0,0">
+                    <TextBlock x:ConnectionId='34' x:Name="AddBook_NameTB" VerticalAlignment="Top" Text="Book Name :" FontSize="25" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <TextBox x:ConnectionId='35' x:Name="AddBook_NameTBox" FontSize="25" Width="auto" BorderBrush="Black" BorderThickness="2" VerticalAlignment="Center"  />
+                    <TextBlock x:ConnectionId='36' x:Name="AddBook_PriceTB" VerticalAlignment="Top" Text="Item Price :" FontSize="25" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <TextBox x:ConnectionId='37' x:Name="AddBook_PriceTBox" FontSize="25" Width="auto" BorderBrush="Black" BorderThickness="2" VerticalAlignment="Center"  />
+                    <TextBlock x:ConnectionId='38' x:Name="AddBook_AuthorTB" Visibility="Collapsed" VerticalAlignment="Top" Text="Author :" FontSize="25" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <TextBox x:ConnectionId='39' x:Name="AddBook_AuthorTBox" FontSize="25" Visibility="Collapsed" Width="auto" BorderBrush="Black" BorderThickness="2" VerticalAlignment="Center"  />
+                    <TextBlock x:ConnectionId='40' x:Name="AddBook_CopyNumTB" Visibility="Collapsed" VerticalAlignment="Top" Text="Copy Number :" FontSize="25" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <TextBox x:ConnectionId='41' x:Name="AddBook_CopyNumTBox" Visibility="Collapsed" FontSize="25" Width="auto" BorderBrush="Black" BorderThickness="2" VerticalAlignment="Center"  />
+                    <TextBlock x:ConnectionId='42' x:Name="AddBook_ShortCutTB" VerticalAlignment="Top" Visibility="Collapsed" Text="ShortCut :" FontSize="25" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <TextBox x:ConnectionId='43' x:Name="AddBook_ShortCutTBox" FontSize="25" Width="auto" Visibility="Collapsed" BorderBrush="Black" BorderThickness="2" VerticalAlignment="Center"  />
+                    <TextBlock x:ConnectionId='44' x:Name="AddBook_ISBNTB" VerticalAlignment="Top" Text="ISBN / ISSN :" FontSize="25" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <TextBox x:ConnectionId='45' x:Name="AddBook_ISBNeTBox" FontSize="25" Width="auto" BorderBrush="Black" BorderThickness="2"  VerticalAlignment="Center"  />
+                    <TextBlock x:ConnectionId='46' x:Name="Stock_Amount" VerticalAlignment="Top" Text="Stock_Amount :" FontSize="25" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <TextBox x:ConnectionId='47' x:Name="Stock_AmountTBox" FontSize="25" Width="auto" BorderBrush="Black" BorderThickness="2"  VerticalAlignment="Center"  />
+                    <ComboBox x:ConnectionId='48' x:Name="CBAddGenre" FontSize="28" PlaceholderText="Book Genre"                              
+                          Background="{StaticResource ButtonBackgroundThemeBrush}"                                       >
+                    </ComboBox>
+                    <TextBlock Width="10"/>
+                    <CalendarDatePicker x:ConnectionId='49' x:Name="Calender" PlaceholderText="Print Date :" FontSize="25"/>
+                    <TextBlock x:ConnectionId='50' x:Name="GenresPicked" Height="auto" FontSize="20" TextWrapping="WrapWholeWords"/>
+                    <Button x:ConnectionId='51' Content="Add Book" FontSize="30" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,100,0,0" BorderBrush="Black" BorderThickness="2"                            />
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="3" BorderBrush="Black" BorderThickness="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Books Data" HorizontalAlignment="Center" FontSize="35" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <GridView x:ConnectionId='24' BorderBrush="Black" BorderThickness="0,0,0,2" Grid.Row="1" x:Name="DataList" VerticalAlignment="Stretch" ItemTemplate="{StaticResource AbstractItemsDataTemplate}" HorizontalAlignment="Stretch">
+                    </GridView>
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock x:ConnectionId='25' x:Name="BuyRemove" Visibility="Collapsed" VerticalAlignment="Stretch" Height="30" FontSize="25" Foreground="Red"/>
+                        <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                            <TextBox x:ConnectionId='26' x:Name="DiscountSetter" Visibility="Collapsed" PlaceholderText="%" FontSize="25" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                            <Button x:ConnectionId='27' x:Name="DiscountApprove" Visibility="Collapsed" Content="Set" FontSize="25" HorizontalAlignment="Center"                            BorderBrush="Black" BorderThickness="2"/>
+                            <Button x:ConnectionId='28' x:Name="AddToCart" HorizontalAlignment="Right" FontSize="25" VerticalAlignment="Stretch" BorderThickness="2" BorderBrush="Black"  Content="Add To Cart"                              />
+                            <Button x:ConnectionId='29' x:Name ="RemoveBook"  HorizontalAlignment="Right" FontSize="25" VerticalAlignment="Stretch" BorderThickness="2" BorderBrush="Black"  Content="Remove Item"                           />
+                            <Button x:ConnectionId='30' x:Name ="FillStock"  HorizontalAlignment="Right" FontSize="25" VerticalAlignment="Stretch" BorderThickness="2" BorderBrush="Black" Content="Fill Stock"                              />
+                            <Button x:ConnectionId='31' x:Name="ShowBook" Content="Show Book" FontSize="25" HorizontalAlignment="Right" VerticalAlignment="Stretch" BorderThickness="2" BorderBrush="Black"                              />
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="1" BorderBrush="Black" BorderThickness="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Cart" FontSize="35" HorizontalAlignment="Center"/>
+                    <ListView x:ConnectionId='18' BorderBrush="Black" BorderThickness="0,0,0,2" Grid.Row="1" x:Name="Purchase" VerticalAlignment="Stretch" ItemTemplate="{StaticResource AbstractItemsDataTemplate}"  HorizontalAlignment="Stretch" >
+                    </ListView>
+                    <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" >
+                        <Button x:ConnectionId='19' x:Name="CheckOut" Margin="0,0,200,0" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Center" FontSize="25" Content="CheckOut"                              />
+                        <Button x:ConnectionId='20' x:Name="RemoveFromCart" BorderBrush="Black" BorderThickness="2" FontSize="25" Content="Remove From Cart"                              Width="244"/>
+                        <DropDownButton x:ConnectionId='21' x:Name="DiscountBtn_DropDown" FontSize="20" Content="Discount" HorizontalAlignment="Right" VerticalAlignment="Stretch" BorderThickness="2" BorderBrush="Black">
+                            <DropDownButton.Flyout>
+                                <MenuFlyout Placement="Top">
+                                    <MenuFlyoutItem x:ConnectionId='22' Text="Employee Discount"                               />
+                                    <MenuFlyoutItem x:ConnectionId='23' Text="Set Discount"                             />
+                                </MenuFlyout>
+                            </DropDownButton.Flyout>
+                        </DropDownButton>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Grid>
+        <StackPanel x:ConnectionId='10' x:Name="CheckoutSP" Grid.RowSpan="2" BorderBrush="black" Visibility="Collapsed" BorderThickness="5"  VerticalAlignment="Center" HorizontalAlignment="Center" Background="white" >
+            <TextBlock x:ConnectionId='15' x:Name="Header" VerticalAlignment="Top" Text="Enjoy Your Books!"  FontSize="25" HorizontalAlignment="Center" Style="{StaticResource CustomTextBlockStyle}"  />
+            <TextBlock/>
+            <TextBlock x:ConnectionId='16' x:Name="PurchasedItemDetails" VerticalAlignment="Stretch"  FontSize="25" HorizontalAlignment="Center"   />
+            <Button x:ConnectionId='17' x:Name="Continu_ShoppingBtn" Content="Continu Shopping"  BorderBrush="black" FontSize="25" BorderThickness="2" VerticalAlignment="Center" HorizontalAlignment="Center"                              />
+            <TextBlock/>
+        </StackPanel>
+        <StackPanel x:ConnectionId='11' x:Name="ItemDetailsSP"  BorderBrush="black" Visibility="Collapsed" VerticalAlignment="Center" HorizontalAlignment="Center" BorderThickness="5"  Grid.RowSpan="2" Background="white" >
+            <TextBlock x:ConnectionId='12' x:Name="ItemDetailsHeadline" Text="Selected Item Details" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="35"  Style="{StaticResource CustomTextBlockStyle}"  />
+            <TextBlock/>
+            <TextBlock x:ConnectionId='13' x:Name="ItemDetails" VerticalAlignment="Stretch"  FontSize="25" HorizontalAlignment="Center"   />
+            <TextBlock/>
+            <TextBlock/>
+            <Button x:ConnectionId='14' x:Name="CloseTB" Content="Continu"  BorderBrush="black" FontSize="25" BorderThickness="2" VerticalAlignment="Center" HorizontalAlignment="Center"                              />
+        </StackPanel>
+    </Grid>
+</Page>
+

@@ -1,0 +1,9 @@
+C:\Users\benye\source\repos\LibraryXaml\BookLib\bin\Debug\netstandard2.0\BookLib.deps.json
+C:\Users\benye\source\repos\LibraryXaml\BookLib\bin\Debug\netstandard2.0\BookLib.dll
+C:\Users\benye\source\repos\LibraryXaml\BookLib\bin\Debug\netstandard2.0\BookLib.pdb
+C:\Users\benye\source\repos\LibraryXaml\BookLib\obj\Debug\netstandard2.0\BookLib.csprojAssemblyReference.cache
+C:\Users\benye\source\repos\LibraryXaml\BookLib\obj\Debug\netstandard2.0\BookLib.AssemblyInfoInputs.cache
+C:\Users\benye\source\repos\LibraryXaml\BookLib\obj\Debug\netstandard2.0\BookLib.AssemblyInfo.cs
+C:\Users\benye\source\repos\LibraryXaml\BookLib\obj\Debug\netstandard2.0\BookLib.csproj.CoreCompileInputs.cache
+C:\Users\benye\source\repos\LibraryXaml\BookLib\obj\Debug\netstandard2.0\BookLib.dll
+C:\Users\benye\source\repos\LibraryXaml\BookLib\obj\Debug\netstandard2.0\BookLib.pdb

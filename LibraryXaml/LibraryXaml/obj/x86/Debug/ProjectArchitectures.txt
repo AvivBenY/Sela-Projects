@@ -1,0 +1,1 @@
+C:\Users\benye\source\repos\LibraryXaml\LibraryXaml\LibraryUI.csproj;x86

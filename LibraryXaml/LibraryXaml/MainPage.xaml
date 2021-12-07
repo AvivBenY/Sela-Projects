@@ -1,0 +1,29 @@
+﻿<Page
+ x:Class="LibraryXaml.MainPage"
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ xmlns:local="using:LibraryXaml"
+ xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ mc:Ignorable="d"
+ Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources >
+        <Style TargetType="TextBlock" x:Key="CustomTextBlockStyle">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <TextBlock x:Name="Title" Text="Library Manager" HorizontalAlignment="Center" FontSize="75" Style="{StaticResource CustomTextBlockStyle}"/>
+            <TextBlock x:Name="Welcome_MessageBox" FontSize="35" TextWrapping="Wrap" Style="{StaticResource CustomTextBlockStyle}" Height="64" Width="269" />
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Reports" BorderBrush="Black" BorderThickness="2" FontSize="65" Height="123" Click="ReportsButton_Click"  HorizontalAlignment="Center"/>
+            <TextBlock />
+            <Button Content="Books Managment" BorderBrush="Black" BorderThickness="2" FontSize="65" Height="123" HorizontalAlignment="Center" Click="AllBooksManagmentButton_Click"/>
+        </StackPanel>
+    </Grid>
+
+</Page>

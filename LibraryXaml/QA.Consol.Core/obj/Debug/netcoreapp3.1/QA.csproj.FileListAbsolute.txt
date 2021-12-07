@@ -1,0 +1,16 @@
+C:\Users\benye\source\repos\LibraryXaml\QA.Consol.Core\bin\Debug\netcoreapp3.1\QA.exe
+C:\Users\benye\source\repos\LibraryXaml\QA.Consol.Core\bin\Debug\netcoreapp3.1\QA.deps.json
+C:\Users\benye\source\repos\LibraryXaml\QA.Consol.Core\bin\Debug\netcoreapp3.1\QA.runtimeconfig.json
+C:\Users\benye\source\repos\LibraryXaml\QA.Consol.Core\bin\Debug\netcoreapp3.1\QA.runtimeconfig.dev.json
+C:\Users\benye\source\repos\LibraryXaml\QA.Consol.Core\bin\Debug\netcoreapp3.1\QA.dll
+C:\Users\benye\source\repos\LibraryXaml\QA.Consol.Core\bin\Debug\netcoreapp3.1\QA.pdb
+C:\Users\benye\source\repos\LibraryXaml\QA.Consol.Core\bin\Debug\netcoreapp3.1\BookLib.dll
+C:\Users\benye\source\repos\LibraryXaml\QA.Consol.Core\bin\Debug\netcoreapp3.1\BookLib.pdb
+C:\Users\benye\source\repos\LibraryXaml\QA.Consol.Core\obj\Debug\netcoreapp3.1\QA.csprojAssemblyReference.cache
+C:\Users\benye\source\repos\LibraryXaml\QA.Consol.Core\obj\Debug\netcoreapp3.1\QA.AssemblyInfoInputs.cache
+C:\Users\benye\source\repos\LibraryXaml\QA.Consol.Core\obj\Debug\netcoreapp3.1\QA.AssemblyInfo.cs
+C:\Users\benye\source\repos\LibraryXaml\QA.Consol.Core\obj\Debug\netcoreapp3.1\QA.csproj.CoreCompileInputs.cache
+C:\Users\benye\source\repos\LibraryXaml\QA.Consol.Core\obj\Debug\netcoreapp3.1\QA.csproj.CopyComplete
+C:\Users\benye\source\repos\LibraryXaml\QA.Consol.Core\obj\Debug\netcoreapp3.1\QA.dll
+C:\Users\benye\source\repos\LibraryXaml\QA.Consol.Core\obj\Debug\netcoreapp3.1\QA.pdb
+C:\Users\benye\source\repos\LibraryXaml\QA.Consol.Core\obj\Debug\netcoreapp3.1\QA.genruntimeconfig.cache
