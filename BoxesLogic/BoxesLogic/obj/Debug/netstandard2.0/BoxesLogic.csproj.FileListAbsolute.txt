@@ -1,0 +1,9 @@
+C:\Users\benye\source\repos\BoxesLogic\BoxesLogic\bin\Debug\netstandard2.0\BoxesLogic.deps.json
+C:\Users\benye\source\repos\BoxesLogic\BoxesLogic\bin\Debug\netstandard2.0\BoxesLogic.dll
+C:\Users\benye\source\repos\BoxesLogic\BoxesLogic\bin\Debug\netstandard2.0\BoxesLogic.pdb
+C:\Users\benye\source\repos\BoxesLogic\BoxesLogic\obj\Debug\netstandard2.0\BoxesLogic.csprojAssemblyReference.cache
+C:\Users\benye\source\repos\BoxesLogic\BoxesLogic\obj\Debug\netstandard2.0\BoxesLogic.AssemblyInfoInputs.cache
+C:\Users\benye\source\repos\BoxesLogic\BoxesLogic\obj\Debug\netstandard2.0\BoxesLogic.AssemblyInfo.cs
+C:\Users\benye\source\repos\BoxesLogic\BoxesLogic\obj\Debug\netstandard2.0\BoxesLogic.csproj.CoreCompileInputs.cache
+C:\Users\benye\source\repos\BoxesLogic\BoxesLogic\obj\Debug\netstandard2.0\BoxesLogic.dll
+C:\Users\benye\source\repos\BoxesLogic\BoxesLogic\obj\Debug\netstandard2.0\BoxesLogic.pdb

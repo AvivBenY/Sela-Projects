@@ -1,0 +1,12 @@
+C:\Users\benye\source\repos\BoxesLogic\Program\bin\Debug\Program.exe.config
+C:\Users\benye\source\repos\BoxesLogic\Program\bin\Debug\Program.exe
+C:\Users\benye\source\repos\BoxesLogic\Program\bin\Debug\Program.pdb
+C:\Users\benye\source\repos\BoxesLogic\Program\bin\Debug\BoxesLogic.dll
+C:\Users\benye\source\repos\BoxesLogic\Program\bin\Debug\ConsoleTables.dll
+C:\Users\benye\source\repos\BoxesLogic\Program\bin\Debug\BoxesLogic.pdb
+C:\Users\benye\source\repos\BoxesLogic\Program\bin\Debug\ConsoleTables.pdb
+C:\Users\benye\source\repos\BoxesLogic\Program\obj\Debug\Program.csprojAssemblyReference.cache
+C:\Users\benye\source\repos\BoxesLogic\Program\obj\Debug\Program.csproj.CoreCompileInputs.cache
+C:\Users\benye\source\repos\BoxesLogic\Program\obj\Debug\Program.csproj.CopyComplete
+C:\Users\benye\source\repos\BoxesLogic\Program\obj\Debug\Program.exe
+C:\Users\benye\source\repos\BoxesLogic\Program\obj\Debug\Program.pdb
