@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="Evil_Cat_2._0.GameOver"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Evil_Cat_2._0"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Canvas x:Name="GameOverBoard" Width="1500" Height="1100">
+        <Canvas.Background>
+            <ImageBrush ImageSource="/Assets/Backround1.jpg" Opacity="0.2">
+            </ImageBrush>
+        </Canvas.Background>
+        <Image Source="/Assets/game_over_PNG56.png"  Margin="-364,0,-364,5" Canvas.Left="814" Width="600" Canvas.Top="-92" Height="600"/>
+        <TextBlock x:Name="ScoreBox" Text=" High Score :" FontSize="60" Margin="309,112,0,0" TextWrapping="Wrap" Height="160" Width="518" Canvas.Left="-281" Canvas.Top="458"/>
+        <Button x:Name="BackToMain_Button" Content="Back To Main Page" FontSize ="30" Canvas.Left="1112" Canvas.Top="518" Height="160" Width="388" Click="BackToMain_Button_Click"/>
+    </Canvas>
+</Page>
+
+
